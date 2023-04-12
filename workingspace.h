@@ -10,7 +10,7 @@
 #include <QTableView>
 #include <QInputDialog>
 #include <QSet>
-#include <QString>
+#include "notifications.h"
 
 namespace Ui {
 class WorkingSpace;
@@ -35,6 +35,8 @@ private slots:
     void on_saveChanges_clicked();
 
     void on_updateAllStorages_clicked();
+
+    void on_chooseCurrStorage_clicked();
 
 private:
     Ui::WorkingSpace *ui;

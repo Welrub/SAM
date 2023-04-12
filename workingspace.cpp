@@ -62,3 +62,10 @@ void WorkingSpace::on_updateAllStorages_clicked()
 {
     tm->select();
 }
+
+void WorkingSpace::on_chooseCurrStorage_clicked()
+{
+    notifications *note = new notifications();
+    QString mes = "Storage was opened";
+    note->post(mes);
+}
