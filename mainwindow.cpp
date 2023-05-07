@@ -24,14 +24,9 @@ void MainWindow::on_entry_button_clicked()
     db.setUserName("root");
     db.setPassword("");
     if(!db.open()){
-        QMessageBox::information(this, "SAM", "Не удалось подключиться к базе данных.");
+        QMessageBox::information(this, "SAM", "Fail.");
     }else{
-        WorkingSpace *ws = new WorkingSpace();
-        try{
-            ws->loading(db);
-        }catch(...){
-            QMessageBox::information(this, "SAM", "Не удалось подключиться к базе данных.");
-        }
+        WorkingSpace *ws = new WorkingSpace(&db);
         MainWindow::hide();
         ws->show();
     }
