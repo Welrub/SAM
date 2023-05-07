@@ -2,15 +2,7 @@
 #define WORKINGSPACE_H
 
 #include <QMainWindow>
-#include <QSql>
-#include <QSqlDatabase>
-#include <QSqlQuery>
-#include <QSqlTableModel>
-#include <QSqlRecord>
-#include <QTableView>
-#include <QInputDialog>
-#include <QSet>
-#include "notifications.h"
+#include "currentchoosenstore.h"
 
 namespace Ui {
 class WorkingSpace;
@@ -21,9 +13,8 @@ class WorkingSpace : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit WorkingSpace(QWidget *parent = nullptr);
+    explicit WorkingSpace(QSqlDatabase* db, QWidget *parent = nullptr);
     ~WorkingSpace();
-    void loading(QSqlDatabase& db);
 
 private slots:
     void on_addStorage_clicked();
@@ -41,9 +32,8 @@ private slots:
 private:
     Ui::WorkingSpace *ui;
     QSqlTableModel *tm;
-    QTableView *view;
-    QSet<QString> _local_stor;
-    int32_t row;
+    QSet<QString> local_store;
+    uint32_t row;
 };
 
 #endif // WORKINGSPACE_H

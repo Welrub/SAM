@@ -28,6 +28,9 @@ set(PROJECT_SOURCES
         item.cpp
         notifications.h
         notifications.cpp
+        currentchoosenstore.cpp
+        currentchoosenstore.h
+        currentchoosenstore.ui
         ${TS_FILES}
 )
 
