@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QPluginLoader>
+#include <QDir>
 #include "workingspace.h"
 #include <QMessageBox>
 
@@ -22,5 +24,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    void loadPlugins();
 };
 #endif // MAINWINDOW_H

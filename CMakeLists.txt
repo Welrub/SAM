@@ -31,6 +31,7 @@ set(PROJECT_SOURCES
         currentchoosenstore.cpp
         currentchoosenstore.h
         currentchoosenstore.ui
+        authorizationinterface.h
         ${TS_FILES}
 )
 
